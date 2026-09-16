@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Ryan/Desktop/MathProblems/out/build/simple",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\MathProblems.dir\\main.cpp.obj -c C:\\Users\\Ryan\\Desktop\\MathProblems\\main.cpp",
+  "file": "C:/Users/Ryan/Desktop/MathProblems/main.cpp",
+  "output": "CMakeFiles/MathProblems.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ryan/Desktop/MathProblems/out/build/simple",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\MathProblems.dir\\Extras.cpp.obj -c C:\\Users\\Ryan\\Desktop\\MathProblems\\Extras.cpp",
+  "file": "C:/Users/Ryan/Desktop/MathProblems/Extras.cpp",
+  "output": "CMakeFiles/MathProblems.dir/Extras.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ryan/Desktop/MathProblems/out/build/simple",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\MathProblems.dir\\Lines.cpp.obj -c C:\\Users\\Ryan\\Desktop\\MathProblems\\Lines.cpp",
+  "file": "C:/Users/Ryan/Desktop/MathProblems/Lines.cpp",
+  "output": "CMakeFiles/MathProblems.dir/Lines.cpp.obj"
+}
+]

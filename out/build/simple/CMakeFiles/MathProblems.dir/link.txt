@@ -1,0 +1,3 @@
+"E:\Visual Studio 2026 Insiders\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\MathProblems.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\MathProblems.dir/objects.a @CMakeFiles\MathProblems.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\MathProblems.dir/objects.a -Wl,--no-whole-archive -o MathProblems.exe -Wl,--out-implib,libMathProblems.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MathProblems.dir\linkLibs.rsp
