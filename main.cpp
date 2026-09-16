@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <list> 
 #include "Extras.cpp"
-#include <ctime>
+#include <time.h>
 #include "Lines.cpp"
 
 static int add(int a, int b);
@@ -210,6 +210,45 @@ static char checkedKeyPressed()
     return keyPressed;
 }
 
+class TimeOfDay {
+
+public:
+
+    struct HoursInTime {
+
+        time_t timeHours{};
+    };
+
+    int getHours() {
+
+        HoursInTime times;
+        time_t now;
+        times.timeHours = time(NULL);
+
+        struct tm* now_t = localtime(&times.timeHours);
+        int hour = now_t->tm_hour;
+        return hour;
+    }
+};
+
+static void getHoursString(TimeOfDay timeNow) {
+
+    if (timeNow.getHours() < 12) {
+
+        std::cout << "Time of Day is: " << upper("Good Morning") << std::endl;
+    }
+
+    if (timeNow.getHours() == 12) {
+       
+        std::cout << "Time of Day is: " << upper("Good Afternoon") << std::endl;
+    }
+
+    else if (timeNow.getHours() > 16) {
+        
+        std::cout << "Time of Day is: " << upper("Good Evening") << std::endl;
+    }
+}
+
 int add(int a, int b)
 {
     return a + b;
@@ -266,6 +305,11 @@ float divide(float a, float b)
 auto main() -> int
 {
     
+    TimeOfDay times;
+    times.getHours();
+    getHoursString(times);
+    std::cout << "\n";
+
     DateLocal dateNow;
     std::cout << dateNow.GetDateNow();
     ISUIAvalible appUI;
@@ -284,7 +328,7 @@ auto main() -> int
     num.xPos = 10;
     num.yPos = 5;
 
-    srand(time(NULL));
+    srand(time(0));
 
     Positions::positions();
 
