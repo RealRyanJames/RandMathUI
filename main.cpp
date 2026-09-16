@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <list> 
 #include "Extras.cpp"
+#include <ctime>
 #include "Lines.cpp"
 
 static int add(int a, int b);
@@ -98,6 +99,24 @@ public:
 
         std::cin >> str;
         return str;
+    }
+};
+
+class DateLocal {
+
+public:
+
+    struct DateNow {
+
+        time_t timeNow;
+
+    };
+
+   auto GetDateNow() {
+
+        time_t timeCurrent = 0;
+        time(&timeCurrent);
+        return ctime(&timeCurrent);
     }
 };
 
@@ -246,6 +265,9 @@ float divide(float a, float b)
 
 auto main() -> int
 {
+    
+    DateLocal dateNow;
+    std::cout << dateNow.GetDateNow();
     ISUIAvalible appUI;
     checkedKeyPressed();
     GETUI();
