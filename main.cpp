@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include <list>
+#include <list> 
 #include "Extras.cpp"
 #include "Lines.cpp"
 
@@ -101,6 +101,40 @@ struct Pos
      }
  };
 
+ class ISUIAvalible {
+    
+     struct AppStartup {
+
+         static bool isWorkingUI;
+         int Length;
+
+     };
+
+ private:
+     
+     bool isUIReady = true;
+
+ public:
+        
+     AppStartup appStartup;
+
+     bool isReady() const {
+
+         if (isUIReady) {
+
+             return AppStartup::isWorkingUI;
+         }
+
+         return true;
+
+     }
+
+     void setMessageEndConsole() {
+
+         std::cout << upper("Application Has Exited");
+     };
+ };
+
  static std::string checkStdin()
  {
      Stdin s;
@@ -183,7 +217,7 @@ float divide(float a, float b)
     if (b == 0)
     {
         std::cout << "Cannot Divide by Zero" << std::endl;
-        exit(0);
+       
     }
 
     return a / b;
@@ -191,14 +225,14 @@ float divide(float a, float b)
 
 auto main() -> int
 {
-
+    ISUIAvalible appUI;
+    checkedKeyPressed();
     GETUI();
     std::cout << "\n";
 
     if (checkStdin().empty())
     {
         std::cout << upper("Empty Message") << std::endl;
-        exit(0);
     }
 
     Positions pos{};
@@ -283,5 +317,8 @@ auto main() -> int
 
     GETUI();
     std::cout << "\n";
+    appUI.setMessageEndConsole();
+
+    system("pause > 0");
     return 0;
 }
